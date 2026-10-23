@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "generator_version": 3,
+  "files": {
+    "train.jsonl": "2dd226de9c3c04babdcd4c182d72fc05acb1afa5e7edeb7a6d4f398c39e77598",
+    "dev.jsonl": "156d01cda5ff3107228eb8ce5c36f8dee8137d82398bbeff1c9f61d40ad7cddf",
+    "test_id.jsonl": "193d3b3b6ea8f7392a2b716e123a22ab7a081eb2b7b4d509fecb365c8bac5b88",
+    "test_transfer.jsonl": "79f4259ea53fbe7b008879004d3dbb286294fe20bf6f201a8501a5c7d4fea674",
+    "test_boss.jsonl": "1035a3b782b978e5e8fb09af043afbeee8a4e480b425969ce3977d2a8b95f023",
+    "dev_forger.jsonl": "2656a6e9f04d7887a396781d4f382942b19020b46b2ae4468b6c177486a98ff1",
+    "train_forger.jsonl": "bc68cc55e70e8f789fdd07e34787a0c61de06597a37cd87ac61900ab1feefe95",
+    "test_injection.jsonl": "4ac90f1e8be40b7266720a178cb84c495016d498be610aa524a42994d3e3be22"
+  }
+}

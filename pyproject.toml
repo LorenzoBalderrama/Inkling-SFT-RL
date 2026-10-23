@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grounded-or-gamed"
+version = "0.1.0"
+description = "Reward hacking, SFT and RL for document-grounded answers, on Tinker"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+tinker = ["tinker==0.35.0", "tinker-cookbook==0.5.8"]
+wandb = ["wandb==0.31.0"]
+report = ["matplotlib==3.11.2"]
+dev = ["pytest>=8", "ruff>=0.9"]
+
+[project.scripts]
+grounded = "grounded.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
