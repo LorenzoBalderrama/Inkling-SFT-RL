@@ -49,6 +49,8 @@ One honest caveat: base Qwen already answered most unanswerable questions (86% f
 
 ![Proxy vs grounded reward during RL](reports/qwen/divergence.png)
 
+What the chart shows: scores on the training batches, which are half unanswerable. With the hardened reward (left), the grounded score climbs to 1.0 while the naive score drops to 0.6, because the naive grader only pays 0.2 for a correct "I don't know". With the naive reward (right), the naive score hits 1.0 almost immediately and the grounded score sits at 0.5: every answerable question is right, and every unanswerable one gets a made-up answer. The gap is there from the first few steps rather than growing; the drop in real performance shows up on held-out data (0.76 → 0.68 on dev during training, and the test table above).
+
 ## Part 2: Inkling-Small
 
 **It can't be hacked this way.** Out of the box, Inkling declined every unanswerable request: 0 guesses in 104 attempts. RL can only reinforce what a model sometimes does, so the naive reward had nothing to work with. Before worrying that a reward is hackable, check whether your model ever explores the hack.
